@@ -27,5 +27,28 @@
 <body>
     <h1>CNN Visualizer</h1>
     <p>Watch how a convolution works.</p>
+<div id="image-grid"></div>
+
+<script>
+    const grid = document.getElementById("image-grid");
+
+    const image = [
+        0, 0, 255, 0, 0,
+        0, 0, 255, 0, 0,
+        0, 0, 255, 0, 0,
+        0, 0, 255, 0, 0,
+        0, 0, 255, 0, 0
+    ];
+
+    for (let i = 0; i < 25; i++) {
+        const pixel = document.createElement("div");
+        pixel.className = "pixel";
+
+        const value = image[i];
+        pixel.style.background = `rgb(${value}, ${value}, ${value})`;
+
+        grid.appendChild(pixel);
+    }
+</script>
 </body>
 </html>
